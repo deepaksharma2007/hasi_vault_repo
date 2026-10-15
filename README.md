@@ -1,4 +1,4 @@
-# Vault Production Setup on EC2 + GitHub Actions 
+# Vault Production Setup on EC2 + GitHub Action
 
 GitHub Actions → Vault (EC2) → AWS (temporary credentials)
 
