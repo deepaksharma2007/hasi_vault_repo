@@ -1,5 +1,5 @@
 # we need to update vault IP 
-name: Terraform Deployment
+name: Terraform Deployment pipeline
 on: [push]
 
 permissions:
