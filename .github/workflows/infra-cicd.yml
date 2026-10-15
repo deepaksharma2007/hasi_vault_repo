@@ -28,8 +28,7 @@ jobs:
             core.info(`aud: ${JSON.stringify(payload.aud)}`);
     
       - uses: actions/checkout@v4
-      - name: Verify AWS credentials
-        run: aws sts get-caller-identity
+  
       - name: Fetch Keys from Vault
         uses: hashicorp/vault-action@v3
         with:
@@ -39,6 +38,9 @@ jobs:
           secrets: |
             aws/creds/terraform-role access_key | AWS_ACCESS_KEY_ID ;
             aws/creds/terraform-role secret_key | AWS_SECRET_ACCESS_KEY
+            
+      - name: Verify AWS credentials
+        run: aws sts get-caller-identity
 
       - uses: hashicorp/setup-terraform@v3
       - run: terraform init
