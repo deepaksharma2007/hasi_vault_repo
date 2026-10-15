@@ -28,7 +28,8 @@ jobs:
             core.info(`aud: ${JSON.stringify(payload.aud)}`);
     
       - uses: actions/checkout@v4
-
+      - name: Verify AWS credentials
+        run: aws sts get-caller-identity
       - name: Fetch Keys from Vault
         uses: hashicorp/vault-action@v3
         with:
