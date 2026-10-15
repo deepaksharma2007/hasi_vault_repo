@@ -1,4 +1,4 @@
-# 1. Define the Provider :- AWS cloud
+# 1. Define the Provider :- AWS cloud provider
 provider "aws" {
   region = "ap-south-1"
 }
