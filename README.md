@@ -100,7 +100,7 @@ vault write auth/jwt/role/gh-actions-role - <<EOF
   "user_claim": "sub",
   "bound_claims_type": "glob",
   "bound_claims": {
-    "sub": "repo:deepaksharma2007/hasi_vault_repo:*"
+    "sub": "repo:deepaksharma2007/hasi_vault_repo*"
   },
   "token_policies": ["terraform-policy"],
   "token_ttl": "1h"
